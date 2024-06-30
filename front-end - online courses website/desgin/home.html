@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Dev .</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+   <style>
+      .status-dot {
+         display: inline-block;
+         width: 10px;
+         height: 10px;
+         border-radius: 50%;
+         margin-left: 10px;
+         cursor: pointer; /* Cursor pointer for interactive elements */
+         vertical-align: middle; /* Align dots with text */
+      }
+      .available {
+         background-color: green;
+      }
+      .unavailable {
+         background-color: red;
+      }
+
+      /* Styles for the quotes section */
+      .quotes {
+         margin-top: 20px;
+         padding: 20px;
+         background: #f5f5f5;
+         border-radius: 8px;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+         text-align: center;
+         font-style: italic;
+         color: #444;
+         position: relative;
+         overflow: hidden;
+      }
+
+      .quotes::before {
+         content: open-quote;
+         font-size: 4rem;
+         color: #ddd;
+         position: absolute;
+         top: 10px;
+         left: 10px;
+         opacity: 0.5;
+         z-index: 1;
+      }
+
+      .quotes::after {
+         content: close-quote;
+         font-size: 4rem;
+         color: #ddd;
+         position: absolute;
+         bottom: 10px;
+         right: 10px;
+         opacity: 0.5;
+         z-index: 1;
+      }
+
+      .quote-text {
+         font-size: 1.5rem;
+         line-height: 1.5;
+         position: relative;
+         z-index: 2;
+         margin: 0;
+      }
+
+      .quote-author {
+         margin-top: 10px;
+         font-size: 1.2rem;
+         font-weight: bold;
+         color: #555;
+         position: relative;
+         z-index: 2;
+      }
+
+      .quote-text-ar {
+         font-size: 1.5rem;
+         line-height: 1.5;
+         color: #444;
+         font-weight: bold;
+         margin-top: 10px;
+         position: relative;
+         z-index: 2;
+      }
+
+      .quotes-highlight {
+         background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 70%);
+         padding: 10px;
+         border-radius: 5px;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+         position: relative;
+         z-index: 2;
+      }
+
+      /* Animation for border */
+      .quotes {
+         border: 2px solid transparent;
+         transition: border-color 0.5s ease;
+      }
+
+      .quotes:hover {
+         border-color: #3498db; /* Change to your preferred border color */
+      }
+   </style>
+
+</head>
+<body>
+
+<header class="header">
+   
+   <section class="flex">
+
+      <a href="home.html" class="logo">Dev .</a>
+
+      <form action="search.html" method="post" class="search-form">
+         <input type="text" name="search_box" required placeholder="Search courses..." maxlength="100">
+         <button type="submit" class="fas fa-search"></button>
+      </form>
+
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+
+      <div class="profile">
+         <img src="images/pic-1.jpg" class="image" alt="">
+         <h3 class="name">Shaikh Anas</h3>
+         <p class="role">Student</p>
+         <a href="profile.html" class="btn">View Profile</a>
+         <div class="flex-btn">
+            <a href="login.html" class="option-btn">Login</a>
+            <a href="register.html" class="option-btn">Register</a>
+         </div>
+      </div>
+
+   </section>
+
+</header>   
+
+<div class="side-bar">
+
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+
+   <div class="profile">
+      <img src="images/pic-1.jpg" class="image" alt="">
+      <h3 class="name">Ahmad Hamaaideh</h3>
+      <p class="role">Student</p>
+      <a href="" class="btn">View Profile (soon)</a>
+   </div>
+
+   <nav class="navbar">
+      <a href="home.html"><i class="fas fa-home"></i><span>Home</span></a>
+      <a href="about.html"><i class="fas fa-question"></i><span>About</span></a>
+      <a href="courses.html"><i class="fas fa-graduation-cap"></i><span>Courses</span></a>
+      <a href="teachers.html"><i class="fas fa-chalkboard-user"></i><span>Teachers</span></a>
+      <a href="contact.html"><i class="fas fa-headset"></i><span>Contact Us</span></a>
+   </nav>
+
+</div>
+
+<section class="home-grid">
+
+   <h1 class="heading">Quick Options</h1>
+
+   <div class="box-container">
+
+      <div class="box">
+         <!-- Quotes Section -->
+         <div class="quotes">
+            <div class="quotes-highlight">
+               <p id="quote-text" class="quote-text">"The journey of a thousand miles begins with a single step."</p>
+               <p id="quote-text-ar" class="quote-text-ar">"رحلة الألف ميل تبدأ بخطوة واحدة."</p>
+               <p id="quote-author" class="quote-author">- Lao Tzu</p>
+            </div>
+         </div>
+      </div>
+
+      <div class="box">
+         <h3 class="title">Top Categories</h3>
+         <div class="flex">
+            <a href="#"><i class="fas fa-book-open"></i><span>Grammar</span><span class="status-dot available"></span></a>
+            <a href="#"><i class="fas fa-comments"></i><span>Speaking</span><span class="status-dot unavailable" onclick="showMessage()"></span></a>
+            <a href="#"><i class="fas fa-pencil-alt"></i><span>Writing</span><span class="status-dot available"></span></a>
+            <a href="#"><i class="fas fa-headphones"></i><span>Listening</span><span class="status-dot available"></span></a>
+            <a href="#"><i class="fas fa-book"></i><span>Reading</span><span class="status-dot unavailable" onclick="showMessage()"></span></a>
+            <a href="#"><i class="fas fa-bullhorn"></i><span>Pronunciation</span><span class="status-dot available"></span></a>
+         </div>
+      </div>
+
+      <div class="box">
+         <h3 class="title">Popular Topics</h3>
+         <div class="flex">
+            <a href="#"><i class="fas fa-language"></i><span>Vocabulary</span><span class="status-dot available"></span></a>
+            <a href="#"><i class="fas fa-pen-fancy"></i><span>Essay Writing</span><span class="status-dot available"></span></a>
+            <a href="#"><i class="fas fa-microphone"></i><span>Conversation</span><span class="status-dot available"></span></a>
+            <a href="#"><i class="fas fa-book-reader"></i><span>Comprehension</span><span class="status-dot unavailable" onclick="showMessage()"></span></a>
+            <a href="#"><i class="fas fa-chalkboard-teacher"></i><span>IELTS Preparation</span><span class="status-dot available"></span></a>
+            <a href="#"><i class="fas fa-globe"></i><span>Business English</span><span class="status-dot available"></span></a>
+         </div>
+      </div>
+
+      <div class="box">
+         <h3 class="title">Become a Tutor</h3>
+         <p class="tutor">Join our team of expert English tutors and help students around the world achieve their language goals.</p>
+         <a href="teachers.html" class="inline-btn">Get Started</a>
+      </div>
+
+   </div>
+
+</section>
+
+<section class="courses">
+
+   <h1 class="heading">Our Courses</h1>
+
+   <div class="box-container">
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/pic-2.jpg" alt="">
+            <div class="info">
+               <h3>John Doe</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/thumb-1.png" alt="">
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">Complete Grammar Tutorial</h3>
+         <a href="playlist.html" class="inline-btn">View Playlist</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/pic-3.jpg" alt="">
+            <div class="info">
+               <h3>John Doe</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/thumb-2.png" alt="">
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">Complete Speaking Tutorial</h3>
+         <a href="playlist.html" class="inline-btn">View Playlist</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/pic-4.jpg" alt="">
+            <div class="info">
+               <h3>John Doe</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/thumb-3.png" alt="">
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">Complete Writing Tutorial</h3>
+         <a href="playlist.html" class="inline-btn">View Playlist</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/pic-5.jpg" alt="">
+            <div class="info">
+               <h3>John Doe</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/thumb-4.png" alt="">
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">Complete Listening Tutorial</h3>
+         <a href="playlist.html" class="inline-btn">View Playlist</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/pic-6.jpg" alt="">
+            <div class="info">
+               <h3>John Doe</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/thumb-5.png" alt="">
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">Complete Reading Tutorial</h3>
+         <a href="playlist.html" class="inline-btn">View Playlist</a>
+      </div>
+
+      <div class="box">
+         <div class="tutor">
+            <img src="images/pic-7.jpg" alt="">
+            <div class="info">
+               <h3>John Doe</h3>
+               <span>21-10-2022</span>
+            </div>
+         </div>
+         <div class="thumb">
+            <img src="images/thumb-6.png" alt="">
+            <span>10 videos</span>
+         </div>
+         <h3 class="title">Complete Pronunciation Tutorial</h3>
+         <a href="playlist.html" class="inline-btn">View Playlist</a>
+      </div>
+
+   </div>
+
+   <div class="more-btn">
+      <a href="courses.html" class="inline-option-btn">View All Courses</a>
+   </div>
+
+</section>
+
+<footer class="footer">
+   &copy; copyright @ 2022 by <span>Learn English</span> | All rights reserved!
+</footer>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+<script>
+   function showMessage() {
+      alert('Coming soon');
+   }
+
+   // Quotes Array
+   const quotes = [
+      { text: "The journey of a thousand miles begins with a single step.", author: "Lao Tzu", textAr: "رحلة الألف ميل تبدأ بخطوة واحدة." },
+      { text: "Success is not the key to happiness. Happiness is the key to success.", author: "Albert Schweitzer", textAr: "النجاح ليس مفتاح السعادة، السعادة هي مفتاح النجاح." },
+      { text: "The only limit to our realization of tomorrow is our doubts of today.", author: "Franklin D. Roosevelt", textAr: "الحد الوحيد لتحقيق غدينا هو شكوكنا اليوم." },
+      { text: "Do not wait to strike till the iron is hot, but make it hot by striking.", author: "William Butler Yeats", textAr: "لا تنتظر حتى يسخن الحديد، بل اجعل الحديد ساخنًا بضربه." },
+      { text: "The best time to plant a tree was 20 years ago. The second best time is now.", author: "Chinese Proverb", textAr: "أفضل وقت لزرع شجرة كان قبل 20 عامًا. أفضل وقت الآن." },
+      { text: "Learning never exhausts the mind.", author: "Leonardo da Vinci", textAr: "التعلم لا ينفد العقل." },
+      { text: "The future belongs to those who believe in the beauty of their dreams.", author: "Eleanor Roosevelt", textAr: "المستقبل ينتمي لأولئك الذين يؤمنون بجمال أحلامهم." },
+      { text: "Education is the most powerful weapon which you can use to change the world.", author: "Nelson Mandela", textAr: "التعليم هو أقوى سلاح يمكنك استخدامه لتغيير العالم." },
+      { text: "Your limitation—it's only your imagination.", author: "Unknown", textAr: "حدودك هي فقط خيالك." },
+      { text: "Push yourself, because no one else is going to do it for you.", author: "Unknown", textAr: "ادفع نفسك، لأنه لا أحد غيرك سيفعل ذلك من أجلك." }
+   ];
+
+   let quoteIndex = 0;
+
+   function changeQuote() {
+      quoteIndex = (quoteIndex + 1) % quotes.length;
+      document.getElementById('quote-text').textContent = `"${quotes[quoteIndex].text}"`;
+      document.getElementById('quote-author').textContent = `- ${quotes[quoteIndex].author}`;
+      document.getElementById('quote-text-ar').textContent = `"${quotes[quoteIndex].textAr}"`;
+   }
+
+   setInterval(changeQuote, 10000);  // Change quote every 10 seconds
+
+   // Initial call to set the first quote
+   changeQuote();
+</script>
+
+</body>
+</html>

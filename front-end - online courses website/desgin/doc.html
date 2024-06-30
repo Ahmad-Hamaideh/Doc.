@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Dev .</title>
+
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+
+   <style>
+
+    .list {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .list-item {
+        margin-bottom: 1rem;
+    }
+
+    .list-item a {
+        color: #007BFF;
+        text-decoration: none;
+    }
+
+    .list-item a:hover {
+        text-decoration: underline;
+    }
+
+    .image-list img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .documentation-section {
+        margin-bottom: 3rem;
+    }
+
+    .documentation-section h3 {
+        margin-bottom: 1rem;
+    }
+
+    .documentation-section ul {
+        padding-left: 20px;
+    }
+
+    .documentation-section ul li {
+        margin-bottom: 0.5rem;
+    }
+   </style>
+</head>
+<body>
+
+<header class="header">
+   <section class="flex">
+      <a href="home.html" class="logo">Dev .</a>
+      <form action="search.html" method="post" class="search-form">
+         <input type="text" name="search_box" required placeholder="Search courses..." maxlength="100">
+         <button type="submit" class="fas fa-search"></button>
+      </form>
+      <div class="icons">
+         <div id="menu-btn" class="fas fa-bars"></div>
+         <div id="search-btn" class="fas fa-search"></div>
+         <div id="user-btn" class="fas fa-user"></div>
+         <div id="toggle-btn" class="fas fa-sun"></div>
+      </div>
+      <div class="profile">
+         <img src="images/pic-1.jpg" class="image" alt="">
+         <h3 class="name">Shaikh Anas</h3>
+         <p class="role">Student</p>
+         <a href="profile.html" class="btn">View Profile</a>
+         <div class="flex-btn">
+            <a href="login.html" class="option-btn">Login</a>
+            <a href="register.html" class="option-btn">Register</a>
+         </div>
+      </div>
+   </section>
+</header>   
+
+<div class="side-bar">
+   <div id="close-btn">
+      <i class="fas fa-times"></i>
+   </div>
+   <div class="profile">
+      <img src="images/pic-1.jpg" class="image" alt="">
+      <h3 class="name">Ahmad Hamaaideh</h3>
+      <p class="role">Student</p>
+      <a href="" class="btn">View Profile (soon)</a>
+   </div>
+   <nav class="navbar">
+      <a href="home.html"><i class="fas fa-home"></i><span>Home</span></a>
+      <a href="about.html"><i class="fas fa-question"></i><span>About</span></a>
+      <a href="courses.html"><i class="fas fa-graduation-cap"></i><span>Courses</span></a>
+      <a href="teachers.html"><i class="fas fa-chalkboard-user"></i><span>Teachers</span></a>
+      <a href="contact.html"><i class="fas fa-headset"></i><span>Contact Us</span></a>
+   </nav>
+</div>
+
+<main>
+
+    <section>
+        <h2>Introduction</h2>
+        <p>Welcome to the document response example.</p>
+    </section>
+    <section class="documentation-section">
+        <h3>Links</h3>
+        <ul class="list">
+            <li class="list-item"><a href="https://example.com/link1" target="_blank">Link 1</a></li>
+            <li class="list-item"><a href="https://example.com/link2" target="_blank">Link 2</a></li>
+            <li class="list-item"><a href="https://example.com/link3" target="_blank">Link 3</a></li>
+        </ul>
+    </section>
+    <section class="documentation-section">
+        <h3>Files</h3>
+        <ul class="list">
+            <li class="list-item"><a href="files/file1.pdf" target="_blank">File 1</a></li>
+            <li class="list-item"><a href="files/file2.pdf" target="_blank">File 2</a></li>
+            <li class="list-item"><a href="files/file3.pdf" target="_blank">File 3</a></li>
+        </ul>
+    </section>
+    <section class="documentation-section">
+        <h3>Images</h3>
+        <div class="image-list">
+            <img src="images/img1.jpg" alt="Image 1">
+            <img src="images/img2.jpg" alt="Image 2">
+            <img src="images/img3.jpg" alt="Image 3">
+        </div>
+    </section>
+
+    <section>
+        <h2>Content</h2>
+        <p>This is where the main content of the document will go.</p>
+    </section>
+    <section>
+        <h2>Conclusion</h2>
+        <p>Thank you for reading this document.</p>
+    </section>
+
+</main>
+
+<footer class="footer">
+   &copy; copyright @ 2024 by <span>Learn English</span> | All rights reserved!
+</footer>
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+<script>
+   function showMessage() {
+      alert('Coming soon');
+   }
+
+   // Quotes Array
+   const quotes = [
+      { text: "The journey of a thousand miles begins with a single step.", author: "Lao Tzu", textAr: "رحلة الألف ميل تبدأ بخطوة واحدة." },
+      { text: "Success is not the key to happiness. Happiness is the key to success.", author: "Albert Schweitzer", textAr: "النجاح ليس مفتاح السعادة، السعادة هي مفتاح النجاح." },
+      { text: "The only limit to our realization of tomorrow is our doubts of today.", author: "Franklin D. Roosevelt", textAr: "الحد الوحيد لتحقيق غدينا هو شكوكنا اليوم." },
+      { text: "Do not wait to strike till the iron is hot, but make it hot by striking.", author: "William Butler Yeats", textAr: "لا تنتظر حتى يسخن الحديد، بل اجعل الحديد ساخنًا بضربه." },
+      { text: "The best time to plant a tree was 20 years ago. The second best time is now.", author: "Chinese Proverb", textAr: "أفضل وقت لزرع شجرة كان قبل 20 عامًا. أفضل وقت الآن." },
+      { text: "Learning never exhausts the mind.", author: "Leonardo da Vinci", textAr: "التعلم لا ينفد العقل." },
+      { text: "The future belongs to those who believe in the beauty of their dreams.", author: "Eleanor Roosevelt", textAr: "المستقبل ينتمي لأولئك الذين يؤمنون بجمال أحلامهم." },
+      { text: "Education is the most powerful weapon which you can use to change the world.", author: "Nelson Mandela", textAr: "التعليم هو أقوى سلاح يمكنك استخدامه لتغيير العالم." },
+      { text: "Your limitation—it's only your imagination.", author: "Unknown", textAr: "حدودك هي فقط خيالك." },
+      { text: "Push yourself, because no one else is going to do it for you.", author: "Unknown", textAr: "ادفع نفسك، لأنه لا أحد غيرك سيفعل ذلك من أجلك." }
+   ];
+
+   let quoteIndex = 0;
+
+   function changeQuote() {
+      quoteIndex = (quoteIndex + 1) % quotes.length;
+      document.getElementById('quote-text').textContent = `"${quotes[quoteIndex].text}"`;
+      document.getElementById('quote-author').textContent = `- ${quotes[quoteIndex].author}`;
+      document.getElementById('quote-text-ar').textContent = `"${quotes[quoteIndex].textAr}"`;
+   }
+
+   setInterval(changeQuote, 10000);  // Change quote every 10 seconds
+
+   // Initial call to set the first quote
+   changeQuote();
+</script>
+
+</body>
+</html>
