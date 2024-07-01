@@ -34,10 +34,6 @@ let profile = document.querySelector('.header .flex .profile');
 let search = document.querySelector('.header .flex .search-form');
 let sideBar = document.querySelector('.side-bar');
 
-// تفعيل الـ sidebar بشكل دائم عند تحميل الصفحة
-sideBar.classList.add('active');
-body.classList.add('active');
-
 // إخفاء البروفايل بشكل دائم عند تحميل الصفحة
 profile.classList.remove('active');
 

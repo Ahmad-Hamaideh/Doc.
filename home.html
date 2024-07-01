@@ -4,7 +4,8 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Dev .</title>
+   <title></title>
+   <link rel="icon" href="https://pngimg.com/d/dot_PNG14.png" type="image/icon type">
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
@@ -28,49 +29,40 @@
       .unavailable {
          background-color: red;
       }
-
-      /* Styles for the quotes section */
+   
       .quotes {
-         margin-top: 20px;
-         padding: 20px;
-         background: #f5f5f5;
-         border-radius: 8px;
-         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-         text-align: center;
-         font-style: italic;
-         color: #444;
          position: relative;
-         overflow: hidden;
+         max-width: 600px;
+         width: 100%;
+         background: #fff;
+         border-radius: 10px;
+         box-shadow: 0 4px 8px rgba(27, 0, 25, 0.2);
+         text-align: center;
+         padding: 20px;
+         overflow: hidden; /* Ensure the background image doesn't overflow */
       }
 
+ 
+
+      
+
       .quotes::before {
-         content: open-quote;
-         font-size: 4rem;
-         color: #ddd;
-         position: absolute;
          top: 10px;
          left: 10px;
-         opacity: 0.5;
-         z-index: 1;
       }
 
       .quotes::after {
-         content: close-quote;
-         font-size: 4rem;
-         color: #ddd;
-         position: absolute;
          bottom: 10px;
          right: 10px;
-         opacity: 0.5;
-         z-index: 1;
+         content: close-quote;
       }
 
       .quote-text {
          font-size: 1.5rem;
          line-height: 1.5;
-         position: relative;
-         z-index: 2;
          margin: 0;
+         position: relative;
+         z-index: 1;
       }
 
       .quote-author {
@@ -79,7 +71,7 @@
          font-weight: bold;
          color: #555;
          position: relative;
-         z-index: 2;
+         z-index: 1;
       }
 
       .quote-text-ar {
@@ -89,27 +81,90 @@
          font-weight: bold;
          margin-top: 10px;
          position: relative;
-         z-index: 2;
+         z-index: 1;
       }
 
-      .quotes-highlight {
-         background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 70%);
-         padding: 10px;
-         border-radius: 5px;
-         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-         position: relative;
-         z-index: 2;
+      .background-image {
+         position: absolute;
+         bottom: 0;
+         left: 0;
+         width: 100%;
+         height: auto;
+         object-fit: cover;
+         z-index: 0;
       }
 
-      /* Animation for border */
-      .quotes {
-         border: 2px solid transparent;
-         transition: border-color 0.5s ease;
-      }
+.footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+}
 
-      .quotes:hover {
-         border-color: #3498db; /* Change to your preferred border color */
-      }
+.footer-link span {
+    margin-right: 0.5rem; 
+}
+
+.footer-image {
+    width: 30px; 
+    height: 30px; 
+}
+.boxSoon {
+    position: relative;
+    padding: 1rem;
+    border: 2px solid #9c026b;
+    background-color: #5a184e;
+    box-shadow: 6px 9px 12px rgba(255, 87, 205, 0.1);
+    border-radius: 8px;
+}
+
+.boxSoon .title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.boxSoon .tutor {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.boxSoon .inline-btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #8e6600;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.boxSoon .inline-btn:hover {
+    background-color: #0056b3;
+}
+
+.boxSoon .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.boxSoon .overlay span {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
    </style>
 
 </head>
@@ -119,7 +174,7 @@
    
    <section class="flex">
 
-      <a href="home.html" class="logo">Dev .</a>
+      <a href="home.html" class="logo">Dot .</a>
 
       <form action="search.html" method="post" class="search-form">
          <input type="text" name="search_box" required placeholder="Search courses..." maxlength="100">
@@ -184,6 +239,7 @@
                <p id="quote-text" class="quote-text">"The journey of a thousand miles begins with a single step."</p>
                <p id="quote-text-ar" class="quote-text-ar">"رحلة الألف ميل تبدأ بخطوة واحدة."</p>
                <p id="quote-author" class="quote-author">- Lao Tzu</p>
+               <img src="https://media.freestocktextures.com/cache/c3/62/c362a20ebe0b7ea69d31aaf233c6c83a.jpg" alt="Background" class="background-image">
             </div>
          </div>
       </div>
@@ -212,11 +268,15 @@
          </div>
       </div>
 
-      <div class="box">
+      <div class="boxSoon">
          <h3 class="title">Become a Tutor</h3>
          <p class="tutor">Join our team of expert English tutors and help students around the world achieve their language goals.</p>
          <a href="teachers.html" class="inline-btn">Get Started</a>
-      </div>
+         <div class="overlay">
+             <span>S o o n</span>
+         </div>
+     </div>
+     
 
    </div>
 
@@ -230,111 +290,82 @@
 
       <div class="box">
          <div class="tutor">
-            <img src="images/pic-2.jpg" alt="">
+            <img src="https://fbi.cults3d.com/uploaders/23713714/illustration-file/6fd15c68-3111-45a5-829d-3e93dbc1b033/Monkey-D-Luffy-JoyBoy.jpg" alt="">
             <div class="info">
-               <h3>John Doe</h3>
-               <span>21-10-2022</span>
+                <h3>Ahmad Hamaideh  </h3>
+                <span>2-7-2024</span>
             </div>
-         </div>
+        </div>
+        
          <div class="thumb">
-            <img src="images/thumb-1.png" alt="">
+            <img src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/161249824/original/750d00c6f3b37003e69789e34370187a5639b543/write-a-short-story-based-on-a-given-prompt.jpg" alt="">
             <span>10 videos</span>
          </div>
-         <h3 class="title">Complete Grammar Tutorial</h3>
+         <h3 class="title">Short Story in English 📺</h3>
          <a href="playlist.html" class="inline-btn">View Playlist</a>
       </div>
 
       <div class="box">
          <div class="tutor">
-            <img src="images/pic-3.jpg" alt="">
+            <img src="https://fbi.cults3d.com/uploaders/23713714/illustration-file/6fd15c68-3111-45a5-829d-3e93dbc1b033/Monkey-D-Luffy-JoyBoy.jpg" alt="">
             <div class="info">
-               <h3>John Doe</h3>
-               <span>21-10-2022</span>
+                <h3>Ahmad Hamaideh  </h3>
+                <span>2-7-2024</span>
             </div>
-         </div>
+        </div>
          <div class="thumb">
-            <img src="images/thumb-2.png" alt="">
-            <span>10 videos</span>
+            <img src="https://engvarta.com/wp-content/uploads/2023/02/Benefits-of-using-an-English-Learning-App.png" alt="">
+            <span>🟢 App </span>
          </div>
-         <h3 class="title">Complete Speaking Tutorial</h3>
-         <a href="playlist.html" class="inline-btn">View Playlist</a>
+         <h3 class="title">The best Apps to learn English .</h3>
+         <a href="playlist.html" class="inline-btn">View list</a>
       </div>
 
       <div class="box">
          <div class="tutor">
-            <img src="images/pic-4.jpg" alt="">
+            <img src="https://fbi.cults3d.com/uploaders/23713714/illustration-file/6fd15c68-3111-45a5-829d-3e93dbc1b033/Monkey-D-Luffy-JoyBoy.jpg" alt="">
             <div class="info">
-               <h3>John Doe</h3>
-               <span>21-10-2022</span>
+                <h3>Ahmad Hamaideh  </h3>
+                <span>2-7-2024</span>
             </div>
-         </div>
+        </div>
          <div class="thumb">
-            <img src="images/thumb-3.png" alt="">
-            <span>10 videos</span>
+            <img src="https://www.open.edu.au/-/media/blog/2024/02-february/start-a-podcast.jpg?h=429&iar=0&w=715&rev=dc83bc7acbc740f9828eedcb81cc11a4&hash=EF69C86E299293E980685F5ECC1620C2" alt="">
+            <span>5 Channels</span>
          </div>
-         <h3 class="title">Complete Writing Tutorial</h3>
-         <a href="playlist.html" class="inline-btn">View Playlist</a>
+         <h3 class="title">Best Channels for Podcasts .</h3>
+         <a href="playlist.html" class="inline-btn">View list</a>
       </div>
 
       <div class="box">
          <div class="tutor">
-            <img src="images/pic-5.jpg" alt="">
+            <img src="https://fbi.cults3d.com/uploaders/23713714/illustration-file/6fd15c68-3111-45a5-829d-3e93dbc1b033/Monkey-D-Luffy-JoyBoy.jpg" alt="">
             <div class="info">
-               <h3>John Doe</h3>
-               <span>21-10-2022</span>
+                <h3>Ahmad Hamaideh  </h3>
+                <span>2-7-2024</span>
             </div>
-         </div>
+        </div>
          <div class="thumb">
-            <img src="images/thumb-4.png" alt="">
+            <img src="https://media.assettype.com/analyticsinsight%2Fimport%2Fwp-content%2Fuploads%2F2023%2F10%2F10-Best-YouTube-Channels-for-Machine-Learning.jpg" alt="">
             <span>10 videos</span>
          </div>
-         <h3 class="title">Complete Listening Tutorial</h3>
-         <a href="playlist.html" class="inline-btn">View Playlist</a>
+         <h3 class="title">Best Channels to learn English .</h3>
+         <a href="playlist.html" class="inline-btn">View list</a>
       </div>
-
-      <div class="box">
-         <div class="tutor">
-            <img src="images/pic-6.jpg" alt="">
-            <div class="info">
-               <h3>John Doe</h3>
-               <span>21-10-2022</span>
-            </div>
-         </div>
-         <div class="thumb">
-            <img src="images/thumb-5.png" alt="">
-            <span>10 videos</span>
-         </div>
-         <h3 class="title">Complete Reading Tutorial</h3>
-         <a href="playlist.html" class="inline-btn">View Playlist</a>
-      </div>
-
-      <div class="box">
-         <div class="tutor">
-            <img src="images/pic-7.jpg" alt="">
-            <div class="info">
-               <h3>John Doe</h3>
-               <span>21-10-2022</span>
-            </div>
-         </div>
-         <div class="thumb">
-            <img src="images/thumb-6.png" alt="">
-            <span>10 videos</span>
-         </div>
-         <h3 class="title">Complete Pronunciation Tutorial</h3>
-         <a href="playlist.html" class="inline-btn">View Playlist</a>
-      </div>
-
-   </div>
 
    <div class="more-btn">
-      <a href="courses.html" class="inline-option-btn">View All Courses</a>
+     <BR>
    </div>
 
 </section>
 
 <footer class="footer">
-   &copy; copyright @ 2022 by <span>Learn English</span> | All rights reserved!
+   <a href="https://www.instagram.com/eooxz/" class="footer-link">
+      &copy; by <span style="margin: 5px,0,0,0;"> Ahmad Hamaideh</span>
+      <img src="images/40133106.png" alt="Instagram Logo" class="footer-image">
+   </a>
 </footer>
+
 
 <!-- custom js file link  -->
 <script src="js/script.js"></script>
