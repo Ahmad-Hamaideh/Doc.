@@ -15,7 +15,7 @@ const disableDarkMode = () => {
 }
 
 // تأكد من تفعيل الوضع الداكن عند تحميل الصفحة
-if (!darkMode || darkMode === 'enabled') {
+if (darkMode === 'enabled') {
    enableDarkMode();
 } else {
    disableDarkMode();
@@ -34,8 +34,16 @@ let profile = document.querySelector('.header .flex .profile');
 let search = document.querySelector('.header .flex .search-form');
 let sideBar = document.querySelector('.side-bar');
 
-// إخفاء البروفايل بشكل دائم عند تحميل الصفحة
-profile.classList.remove('active');
+// تفعيل الشريط الجانبي فقط عند النقر على الزر
+document.querySelector('#menu-btn').onclick = () => {
+   sideBar.classList.toggle('active');
+   body.classList.toggle('active');
+}
+
+document.querySelector('#close-btn').onclick = () => {
+   sideBar.classList.remove('active');
+   body.classList.remove('active');
+}
 
 document.querySelector('#user-btn').onclick = () => {
    // تأكد من بقاء البروفايل مخفيًا دائمًا
@@ -46,16 +54,6 @@ document.querySelector('#user-btn').onclick = () => {
 document.querySelector('#search-btn').onclick = () => {
    search.classList.toggle('active');
    profile.classList.remove('active');
-}
-
-document.querySelector('#menu-btn').onclick = () => {
-   sideBar.classList.toggle('active');
-   body.classList.toggle('active');
-}
-
-document.querySelector('#close-btn').onclick = () => {
-   sideBar.classList.remove('active');
-   body.classList.remove('active');
 }
 
 window.onscroll = () => {
