@@ -63,7 +63,10 @@ window.onscroll = () => {
    // لا تقم بإلغاء تنشيط الـ sidebar عند التمرير
 }
 
-// ضمان إخفاء البروفايل عند تحميل الصفحة
+// ضمان إخفاء البروفايل ونموذج البحث عند تحميل الصفحة
 window.onload = () => {
    profile.classList.remove('active');
+   search.classList.remove('active');
+   sideBar.classList.remove('active'); // تأكد من إخفاء الشريط الجانبي عند تحميل الصفحة
+   body.classList.remove('active'); // تأكد من أن الجسم ليس مفعلاً عند تحميل الصفحة
 }

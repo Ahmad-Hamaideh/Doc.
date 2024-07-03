@@ -4,7 +4,8 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title></title>
+   <title>Dot .</title>
+
    <link rel="icon" href="https://pngimg.com/d/dot_PNG14.png" type="image/icon type">
 
    <!-- font awesome cdn link  -->
@@ -14,6 +15,28 @@
    <link rel="stylesheet" href="css/style.css">
 
    <style>
+
+body.active {
+    overflow: hidden; /* لتعطيل التمرير عند تفعيل الشريط الجانبي */
+}
+
+.side-bar.active {
+    width: 250px; /* تأكد من عرض الشريط الجانبي عند تفعيله */
+    transition: width 0.3s;
+}
+
+.header .flex .profile {
+    display: none; /* إخفاء البروفايل افتراضيًا */
+}
+
+.header .flex .profile.active {
+    display: block; /* إظهار البروفايل عند تفعيل active */
+}
+
+/* تأكد من أن البروفايل مخفي بشكل دائم عند التحميل */
+body.active .header .flex .profile {
+    display: none;
+}
       .status-dot {
          display: inline-block;
          width: 10px;
@@ -88,7 +111,7 @@
          position: absolute;
          bottom: 0;
          left: 0;
-         width: 100%;
+         width: 120%;
          height: auto;
          object-fit: cover;
          z-index: 0;
@@ -176,10 +199,7 @@
 
       <a href="home.html" class="logo">Dot .</a>
 
-      <form action="search.html" method="post" class="search-form">
-         <input type="text" name="search_box" required placeholder="Search courses..." maxlength="100">
-         <button type="submit" class="fas fa-search"></button>
-      </form>
+    
 
       <div class="icons">
          <div id="menu-btn" class="fas fa-bars"></div>
@@ -203,28 +223,6 @@
 
 </header>   
 
-<div class="side-bar">
-
-   <div id="close-btn">
-      <i class="fas fa-times"></i>
-   </div>
-
-   <div class="profile">
-      <img src="images/pic-1.jpg" class="image" alt="">
-      <h3 class="name">Ahmad Hamaaideh</h3>
-      <p class="role">Student</p>
-      <a href="" class="btn">View Profile (soon)</a>
-   </div>
-
-   <nav class="navbar">
-      <a href="home.html"><i class="fas fa-home"></i><span>Home</span></a>
-      <a href="about.html"><i class="fas fa-question"></i><span>About</span></a>
-      <a href="courses.html"><i class="fas fa-graduation-cap"></i><span>Courses</span></a>
-      <a href="teachers.html"><i class="fas fa-chalkboard-user"></i><span>Teachers</span></a>
-      <a href="contact.html"><i class="fas fa-headset"></i><span>Contact Us</span></a>
-   </nav>
-
-</div>
 
 <section class="home-grid">
 
@@ -284,7 +282,7 @@
 
 <section class="courses">
 
-   <h1 class="heading">Our Courses</h1>
+   <h1 class="heading">Other topics</h1>
 
    <div class="box-container">
 
@@ -318,7 +316,7 @@
             <span>🟢 App </span>
          </div>
          <h3 class="title">The best Apps to learn English .</h3>
-         <a href="playlist.html" class="inline-btn">View list</a>
+         <a href="app.html" class="inline-btn">View list</a>
       </div>
 
       <div class="box">
@@ -360,8 +358,8 @@
 </section>
 
 <footer class="footer">
-   <a href="https://www.instagram.com/eooxz/" class="footer-link">
-      &copy; by <span style="margin: 5px,0,0,0;"> Ahmad Hamaideh</span>
+   <a href="https://www.instagram.com/eooxz/" class="footer-link">  &copy; by 
+      <span style="margin-left: 5px;">Ahmad Hamaideh</span>
       <img src="images/40133106.png" alt="Instagram Logo" class="footer-image">
    </a>
 </footer>

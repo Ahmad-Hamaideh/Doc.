@@ -6,85 +6,101 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>video playlist</title>
 
+   <link rel="icon" href="https://pngimg.com/d/dot_PNG14.png" type="image/icon type">
+
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
+<style>
+ 
+ .highlight {
 
+    display: inline-block;
+    background-color: #f0db4f;
+    color: #000;
+    padding: 0.2rem 0.6rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    font-size: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.1s, color 0.1s;
+    font-family: sans-serif;
+    margin: 4px;
+}
+
+
+.highlight:hover {
+    background-color: #e5c041; /* لون خلفية الهايلايت عند التمرير */
+    color: #333; /* لون النص عند التمرير */
+}
+
+.footer-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-link span {
+    margin-right: 0.5rem; 
+}
+
+.footer-image {
+    width: 30px; 
+    height: 30px; 
+}
+</style>
 </head>
 <body>
 
-<header class="header">
+
+   <header class="header">
    
-   <section class="flex">
-
-      <a href="home.html" class="logo">Educa.</a>
-
-      <form action="search.html" method="post" class="search-form">
-         <input type="text" name="search_box" required placeholder="search courses..." maxlength="100">
-         <button type="submit" class="fas fa-search"></button>
-      </form>
-
-      <div class="icons">
-         <div id="menu-btn" class="fas fa-bars"></div>
-         <div id="search-btn" class="fas fa-search"></div>
-         <div id="user-btn" class="fas fa-user"></div>
-         <div id="toggle-btn" class="fas fa-sun"></div>
-      </div>
-
-      <div class="profile">
-         <img src="images/pic-1.jpg" class="image" alt="">
-         <h3 class="name">shaikh anas</h3>
-         <p class="role">studen</p>
-         <a href="profile.html" class="btn">view profile</a>
-         <div class="flex-btn">
-            <a href="login.html" class="option-btn">login</a>
-            <a href="register.html" class="option-btn">register</a>
+      <section class="flex">
+   
+         <a href="home.html" class="logo">Dot .</a>
+   
+       
+   
+         <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <div id="user-btn" class="fas fa-user"></div>
+            <div id="toggle-btn" class="fas fa-sun"></div>
          </div>
-      </div>
-
-   </section>
-
-</header>   
-
-<div class="side-bar">
-
-   <div id="close-btn">
-      <i class="fas fa-times"></i>
-   </div>
-
-   <div class="profile">
-      <img src="images/pic-1.jpg" class="image" alt="">
-      <h3 class="name">shaikh anas</h3>
-      <p class="role">studen</p>
-      <a href="profile.html" class="btn">view profile</a>
-   </div>
-
-   <nav class="navbar">
-      <a href="home.html"><i class="fas fa-home"></i><span>home</span></a>
-      <a href="about.html"><i class="fas fa-question"></i><span>about</span></a>
-      <a href="courses.html"><i class="fas fa-graduation-cap"></i><span>courses</span></a>
-      <a href="teachers.html"><i class="fas fa-chalkboard-user"></i><span>teachers</span></a>
-      <a href="contact.html"><i class="fas fa-headset"></i><span>contact us</span></a>
-   </nav>
-
-</div>
-
+   
+         <div class="profile">
+            <img src="images/pic-1.jpg" class="image" alt="">
+            <h3 class="name">Shaikh Anas</h3>
+            <p class="role">Student</p>
+            <a href="profile.html" class="btn">View Profile</a>
+            <div class="flex-btn">
+               <a href="login.html" class="option-btn">Login</a>
+               <a href="register.html" class="option-btn">Register</a>
+            </div>
+         </div>
+   
+      </section>
+   
+   </header>   
+   
+ 
 <section class="playlist-details">
 
-   <h1 class="heading">playlist details</h1>
 
    <div class="row">
 
       <div class="column">
-         <form action="" method="post" class="save-playlist">
-            <button type="submit"><i class="far fa-bookmark"></i> <span>save playlist</span></button>
-         </form>
+      </br>
+      <br\><br\>
+   </br>
    
          <div class="thumb">
             <img src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto,q_auto,f_auto/gigs/161249824/original/750d00c6f3b37003e69789e34370187a5639b543/write-a-short-story-based-on-a-given-prompt.jpg" alt="">
-            <span>10 videos</span>
+            <span class="s">10 videos</span>
          </div>
       </div>
       <div class="column">
@@ -98,8 +114,7 @@
    
          <div class="details">
             <h3>Short Story in English 📺</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum minus reiciendis, error sunt veritatis exercitationem deserunt velit doloribus itaque voluptate.</p>
-            <a href="teacher_profile.html" class="inline-btn">view profile</a>
+            <p>Discover a range of short illustrated stories that combine creative storytelling with beautiful artwork, offering a delightful escape into a world of fantasy and wonder.</p>
          </div>
       </div>
    </div>
@@ -112,62 +127,90 @@
 
    <div class="box-container">
 
-      <a class="box" href="watch-video.html">
+      <a class="box" href="https://youtu.be/82301d-ARrk?si=d5rDNRjiHwW6Z7MY" id="t">
          <i class="fas fa-play"></i>
-         <img src="images/post-1-1.png" alt="">
-         <h3>complete HTML tutorial (part 01)</h3>
+         
+         <img class="m" src="https://img.freepik.com/premium-photo/boy-reading-book-with-fantastic-story_726253-732.jpg" alt="">
+         <h3>The Adventures of Tom Sawyer <span class="highlight">Level 1</span>
+         </h3>
       </a>
 
-      <a class="box" href="watch-video.html">
+      <a class="box" href="https://youtu.be/6OecwZVHKc8?si=JTFpshCjyZlkt31O" id="t">
          <i class="fas fa-play"></i>
-         <img src="images/post-1-2.png" alt="">
-         <h3>complete HTML tutorial (part 02)</h3>
+         
+         <img class="m" src="https://www.veriheal.com/wp-content/uploads/2022/11/Insomnia.jpg" alt="">
+         <h3>Who Couldn't Sleep <span class="highlight">Level 1</span>
+         </h3>
+      </a>
+      <a class="box" href="https://youtu.be/K8Zt1vO9dJE?si=Jlq2W9eiGl8EPu2V" id="t">
+
+         <i class="fas fa-play"></i>
+         
+         <img class="m" src="https://media.baamboozle.com/uploads/images/60809/1596652387_575973" alt="">
+         <h3>A Little Trouble in Dublin <span class="highlight">Level 1</span>
+         </h3>
+      </a>
+      <a class="box" href="https://youtu.be/HxdIMT1rri8?si=3lFM3s7_0qQ16ST0" id="t">
+
+         <i class="fas fa-play"></i>
+         
+         <img class="m" src="https://img.freepik.com/free-photo/japan-background-digital-art_23-2151546156.jpg" alt="">
+         <h3>Japan, Life and Culture <span class="highlight">Level 1</span>
+         </h3>
       </a>
 
-      <a class="box" href="watch-video.html">
-         <i class="fas fa-play"></i>
-         <img src="images/post-1-3.png" alt="">
-         <h3>complete HTML tutorial (part 03)</h3>
-      </a>
+      <a class="box" href="https://youtu.be/CmK7sJHtA_c?si=cG0JAKfnB-8AlYjX" id="t">
 
-      <a class="box" href="watch-video.html">
-         <i class="fas fa-play"></i>
-         <img src="images/post-1-4.png" alt="">
-         <h3>complete HTML tutorial (part 04)</h3>
-      </a>
+      <i class="fas fa-play"></i>
+         
+      <img class="m" src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1317792226i/874305.jpg" alt="">
+      <h3> The apple tree 🍎 <span class="highlight">Level 1</span>
+      </h3>
+   </a>
 
-      <a class="box" href="watch-video.html">
-         <i class="fas fa-play"></i>
-         <img src="images/post-1-5.png" alt="">
-         <h3>complete HTML tutorial (part 05)</h3>
-      </a>
+   <a class="box" href="https://youtu.be/ZB4lOVRMt5I?si=QQ4lb7jVQi852W3z" id="t">
 
-      <a class="box" href="watch-video.html">
-         <i class="fas fa-play"></i>
-         <img src="images/post-1-6.png" alt="">
-         <h3>complete HTML tutorial (part 06)</h3>
-      </a>
+   <i class="fas fa-play"></i>
+         
+   <img class="m" src="https://w7.pngwing.com/pngs/561/982/png-transparent-the-tale-of-benjamin-bunny-a-pop-up-book-the-tale-of-peter-rabbit-the-tale-of-squirrel-nutkin-the-tale-of-the-flopsy-bunnies-peter-rabbit-mammal-animals-cat-like-mammal.png" alt="">
+   <h3>Peter Rabbit & Benjamin Bunny<span class="highlight">Level 1</span>
+   </h3>
+</a>
+<a class="box" href="https://youtu.be/7hOUU07WzcE?si=VhbzkGs09yaASTGv" id="t">
+   <i class="fas fa-play"></i>
+   <img class="m" src="https://hakenmusic.com/wp-content/uploads/2020/03/themountain-1.jpg" alt="">
+   <h3>The Mountain <span class="highlight">Level 1</span></h3>
+</a>
+
+<a class="box" href="https://youtu.be/9Q2t6o5TlwI?si=pYP2W5-J-KktNJb0" id="t">
+   <i class="fas fa-play"></i>
+   <img class="m" src="https://media.thefablecottage.com/stories/images/beebear04.jpg" alt="">
+   <h3>The Bear and the Bee 🍯<span class="highlight">Level 1</span></h3>
+</a>
+
+<a class="box" href="https://youtu.be/t9VRrjcq2Vc?si=ATWgIj32w6xZ5CUr" id="t">
+   <i class="fas fa-play"></i>
+   <img class="m" src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/A493675734794E0DD2563A1595988F35F3152BB7062DA6F854515830B702873A/scale?width=1200&aspectRatio=1.78&format=webp" alt="">
+   <h3>Peter Pan <span class="highlight">Level 1</span></h3>
+</a>
+
+<a class="box" href="https://youtu.be/NyhtLRitTWc?si=33ZB8qAAAcvq-y6p" id="t">
+   <i class="fas fa-play"></i>
+   <img class="m" src="https://www.writersrepublic.com/storage/app/uploads/public/plo/t-s/tru/plot-structure.webp" alt="">
+   <h3>Improve Your English <span class="highlight">Level 1</span></h3>
+</a>
+
 
    </div>
 
 </section>
 
 
-
-
-
-
-
-
-
-
-
-
-
 <footer class="footer">
-
-   &copy; copyright @ 2022 by <span>mr. web designer</span> | all rights reserved!
-
+   <a href="https://www.instagram.com/eooxz/" class="footer-link">  &copy; by 
+      <span style="margin-left: 5px;">Ahmad Hamaideh</span>
+      <img src="images/40133106.png" alt="Instagram Logo" class="footer-image">
+   </a>
 </footer>
 
 <!-- custom js file link  -->

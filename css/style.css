@@ -11,6 +11,7 @@
    --border:.1rem solid rgba(0,0,0,.2);
 }
 
+
 *{
    font-family: 'Nunito', sans-serif;
    margin:0; padding:0;
@@ -44,7 +45,6 @@ html::-webkit-scrollbar-thumb{
 
 body{
    background-color: var(--light-bg);
-   padding-left: 30rem;
 }
 
 body.dark{
@@ -243,92 +243,7 @@ section{
    display: none;
 }
 
-.side-bar{
-   position: fixed;
-   top: 0; left: 0;
-   width: 30rem;
-   background-color: var(--white);
-   height: 100vh;
-   border-right: var(--border);
-   z-index: 1200;
-}
 
-.side-bar #close-btn{
-   text-align: right;
-   padding: 2rem;
-   display: none;
-}
-
-.side-bar #close-btn i{
-   text-align: right;
-   font-size: 2.5rem;
-   background:var(--red);
-   border-radius: .5rem;
-   color:var(--white);
-   cursor: pointer;
-   height: 4.5rem;
-   width: 4.5rem;
-   line-height: 4.5rem;
-   text-align: center;
-}
-
-.side-bar #close-btn i:hover{
-   background-color: var(--black);
-}
-
-.side-bar .profile{
-   padding:3rem 2rem;
-   text-align: center;
-}
-
-.side-bar .profile .image{
-   height: 10rem;
-   width: 10rem;
-   border-radius: 50%;
-   object-fit: contain;
-   margin-bottom: 1rem;
-}
-
-.side-bar .profile .name{
-   font-size: 2rem;
-   color:var(--black);
-   overflow: hidden;
-   text-overflow: ellipsis;
-   white-space: nowrap;
-}
-
-.side-bar .profile .role{
-   font-size: 1.8rem;
-   color: var(--light-color);
-}
-
-.side-bar .navbar a{
-   display: block;
-   padding: 2rem;
-   font-size: 2rem;
-}
-
-.side-bar .navbar a i{
-   margin-right: 1.5rem;
-   color:var(--main-color);
-   transition: .2s linear;
-}
-
-.side-bar .navbar a span{
-   color:var(--light-color);
-}
-
-.side-bar .navbar a:hover{
-   background-color: var(--light-bg);
-}
-
-.side-bar .navbar a:hover i{
-   margin-right: 2.5rem;
-}
-
-.side-bar.active{
-   left: -30rem;
-}
 
 .home-grid .box-container{
    display: grid;
@@ -1302,12 +1217,10 @@ section{
 
    body{
       padding-left: 0;
+      margin: 0%;
    }
 
-   .side-bar{
-      left: -30rem;
-      transition: .2s linear;
-   }
+  
 
    .side-bar #close-btn{
       display: block;
@@ -1354,23 +1267,39 @@ section{
 
 }
 
-@media (max-width:450px){
-
-   html{
-      font-size: 50%;
+@media (max-width: 450px) {
+   html {
+      font-size: 50%; /* تغيير حجم الخط */
    }
 
-   .flex-btn{
-      gap: 0;
-      flex-flow: column;
+   .flex-btn {
+      gap: 0; /* إزالة الفراغ بين العناصر */
+      flex-flow: column; /* ترتيب العناصر عمودياً */
    }
 
-   .home-grid .box-container{
-      grid-template-columns: 1fr;
+   .home-grid .box-container {
+      grid-template-columns: 1fr; /* عرض عمود واحد في الشبكة */
    }
 
-   .about .row .image img{
-      height: 25rem;
+   .about .row .image img {
+      height: 25rem; /* ضبط ارتفاع الصورة */
    }
 
+   /* إضافة هذا السطر لتصحيح التمرير الأفقي */
+   body {
+      overflow-x: hidden; /* إخفاء التمرير الأفقي */
+   }
+
+   /* إضافة قواعد عامة لتحسين التناسق على الشاشات الصغيرة */
+   * {
+      box-sizing: border-box; /* التأكد من حساب padding و border ضمن العرض */
+      margin: 0; /* إزالة الهوامش الافتراضية */
+      padding: 0; /* إزالة التباعد الافتراضي */
+   }
+
+   /* تأكد من عدم تجاوز العناصر العرض */
+   .container, .content, .wrapper {
+      max-width: 100%; /* ضمان عدم تجاوز العرض */
+      overflow-x: auto; /* إذا لزم الأمر، السماح بالتمرير الأفقي */
+   }
 }
